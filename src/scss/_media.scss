@@ -1,0 +1,194 @@
+@media screen and (max-width: 768px) {
+    .editor__title {
+        font-size: 42px;
+        line-height: 42px;
+    }
+
+    .github_rating {
+        table {
+            margin-top: 20px;
+        }
+    }
+
+
+    .features {
+        background: rgba(0, 0, 0, 0.0001);
+        margin-top: 0;
+
+        &__title {
+            font-size: 42px;
+            line-height: 44px;
+            position: static;
+            padding: 43px;
+            text-align: center;
+        }
+
+        &__subtitle {
+            margin-top: 26px;
+        }
+
+        &__inner {
+            display: block;
+        }
+
+        &__wrapper {
+            display: block;
+        }
+
+        &__code {
+            position: static;
+            min-height: 519px;
+        }
+
+        &__item {
+            margin-top: 50px;
+        }
+    }
+
+    .testimonials {
+        padding-top: 85px;
+    }
+
+
+    @media screen and (max-width: 614px) {
+        .editor {
+            &__title {
+                font-size: 26px;
+                line-height: 28px;
+            }
+
+            &__subtitle {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+        }
+
+        .pricing {
+            &__items {
+                margin-top: 18px;
+            }
+
+            &__title {
+                font-size: 28px;
+                line-height: 42px;
+            }
+        }
+
+        .features {
+            padding-bottom: 6px;
+
+            &__title {
+                font-size: 26px;
+                line-height: 26px;
+                position: static;
+
+            }
+
+            &__subtitle {
+                text-align: center;
+            }
+
+            &__txt {
+                text-align: center;
+            }
+
+            &__item {
+                display: block;
+                margin-top: 36px;
+
+            }
+
+            &__code {
+                min-height: 318px;
+            }
+        }
+
+        .testimonials {
+            padding-top: 56px;
+
+            &__wrapper {
+                margin-top: 45px;
+            }
+
+            &__item {
+                margin-bottom: 45px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .header {
+            &__burger {
+                z-index: 5;
+                display: block;
+                position: relative;
+                width: 30px;
+                height: 18px;
+                cursor: pointer;
+
+            }
+            &__nav {
+                overflow: auto;
+                z-index: 5;
+                display: block;
+                left: -200%;
+                transition: left 0.3s ease 0s;
+
+            }
+
+        }
+
+        .header__burger span,
+        .header__burger::before,
+        .header__burger::after {
+            left: 0;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .header__burger::before,
+        .header__burger::after {
+            content: "";
+        }
+
+        .header__burger::before {
+            top: 0;
+        }
+
+        .header__burger::after {
+            bottom: 0;
+
+        }
+
+        .header__burger span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+        }
+
+
+    }
+    .header__nav.active {
+        left: 0;
+        &__link:hover {
+            color:#fff
+        }
+    }
+
+    .header__burger.active span{
+        transform: scale(0) translate(0px, -50%);
+    }
+    .header__burger.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .header__burger.active::after {
+        top: 50%;
+        transform: rotate(45deg) translate(0px, -50%);
+    }
+   
+}

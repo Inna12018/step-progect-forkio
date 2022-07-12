@@ -1,0 +1,257 @@
+
+.header {
+    background-color: #000000;
+    padding-top: 33px;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+
+    @include media("max", "md") {
+        background-color: #27262A;
+        position: relative;
+        padding-bottom: 50px;
+    }
+
+    @include media("max", "sm") {
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+
+    &__wrapper {
+        padding: 20px;
+
+        @include flex-between;
+        max-width: 80%;
+        margin: 0 auto;
+
+        @include media("max", "lg") {
+            max-width: 100%;
+            margin: 0 20px;
+        }
+    }
+
+    &__img {
+        display: block;
+        min-width: 118px;
+
+        @include media("max", "sm") {
+            display: none;
+        }
+
+        &:hover {
+            filter: brightness(2);
+        }
+
+        &--mob {
+            display: none;
+
+            @include media("max", "sm") {
+                display: block;
+            }
+
+            &:hover {
+                filter: brightness(2);
+            }
+        }
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav {
+        @include flex-between;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 48px;
+
+        @include media("max", "md") {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10%;
+            margin-right: 0;
+            justify-content: center;
+        }
+
+        @include media("max", "sm") {
+            display: none;
+            background: #333333;
+            flex-direction: column;
+            bottom: 0;
+            transform: translate(0, 100%);
+            z-index: 10;
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        margin-left: 48px;
+
+        @include media("max", "lg") {
+            margin-left: 25px;
+        }
+
+        @include media("max", "sm") {
+            min-height: 55px;
+            border-bottom: 1px solid;
+            margin-left: 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__link {
+        @include montserrat-bold;
+        font-size: 16px;
+        line-height: 17px;
+        align-items: center;
+        color: $main-color;
+        transition: 0.3s;
+
+        @include media("max", "lg") {
+            font-size: 14px;
+        }
+
+        @include media("max", "sm") {
+            font-size: 12px;
+        }
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+
+    &__burger {
+        display: none;
+    }
+
+    &__btn {
+        @include montserrat-bold;
+        font-size: 16px;
+        line-height: 17px;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        background: #8D81AC;
+        border-radius: 40px;
+        width: 145px;
+        padding: 11px 20px;
+        border: 2px solid #8D81AC;
+        transition: 0.3s;
+        text-transform: capitalize;
+
+        &:hover {
+            color: $main-color;
+            background: #fff;
+            border: 2px solid #8D81AC;
+        }
+    }
+}
+
+.banner {
+    background: url(../img/header/header-background-desctop.png) no-repeat center center;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    padding-top: 42px;
+    position: relative;
+
+    &__title {
+        @include montserrat-bold;
+        font-size: 82px;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 0;
+        margin-top: 20px;
+        margin-bottom: 0;
+        margin-top: 64px;
+
+        @include media("max", "md") {
+            font-size: 72px;
+        }
+
+        @include media("max", "sm") {
+            font-size: 48px;
+            margin-top: 0;
+        }
+    }
+
+    &__subtitle {
+        @include lato-normal;
+        font-size: 30px;
+        line-height: 30px;
+        align-items: center;
+        text-align: center;
+        color: $main-color;
+        margin-top: 19px;
+
+        @include media("max", "md") {
+            font-size: 24px;
+        }
+
+        @include media("max", "md") {
+            font-size: 18px;
+        }
+    }
+
+    &__text {
+        @include montserrat-normal;
+        font-size: 16px;
+        line-height: 16px;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #848E97;
+        margin-top: 19px;
+
+        @include media("max", "md") {
+            font-size: 14px;
+        }
+    }
+
+    &__btn-big {
+        width: 390px;
+        padding: 23px 61px;
+        border: 2px solid #8D81AC;
+
+        @include media("max", "sm") {
+            width: 290px;
+            padding: 15px 26px;
+        }
+    }
+
+    &__download {
+        position: absolute;
+        text-align: center;
+        bottom: -68px;
+        text-transform: capitalize;
+        left: 50%;
+        transform: translate(-50%, 0px);
+    }
+
+    &__period {
+        @include montserrat-normal;
+        font-size: 14px;
+        line-height: 15px;
+        align-items: center;
+        text-align: center;
+        color: #848E97;
+        margin-top: 19px;
+    }
+
+    body.lock{
+        overflow: hidden;
+    }
+}

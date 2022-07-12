@@ -1,0 +1,143 @@
+.pricing {
+    background: url(../img/pricing/pricing-bg.png);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 86px 0 20px;
+
+    &__title {
+        @include montserrat-bold;
+        text-transform: capitalize;
+        font-size: 48px;
+        line-height: 50px;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 112px;
+
+    }
+
+    &__wrapper {
+        @include flex-wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 3% 5%;
+        min-height: 450px*1.2;
+    }
+
+    &__items {
+        flex-basis: 24%;
+        margin: auto 0px;
+        background-color: rgba(#ffffff, 0.1);
+        height: 450px;
+        min-width: 263px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition-duration: 1s;
+    }
+
+
+    &__type {
+
+        background-color: rgba(#ffffff, 0.1);
+        padding: 35px 0 25px;
+        width: 100%;
+        @include montserrat-normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 24px;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+    }
+
+    &__price {
+
+        @include montserrat-normal;
+        font-size: 60px;
+        line-height: 90px;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        &:before {
+            content: '$';
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            margin-right: -3%;
+        }
+    }
+
+    &__frequency {
+        display: block;
+        @include montserrat-normal;
+        font-size: 14px;
+        line-height: 16px;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    &__text {
+        text-transform: capitalize;
+        @include montserrat-normal;
+        font-size: 16px;
+        line-height: 18px;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    &__btn {
+
+        background-color: rgba(#ffffff, 0.15);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 12px 35px;
+        border-radius: 40px;
+        margin-top: auto;
+        margin-bottom: 38px;
+        @include montserrat-normal;
+        font-size: 16px;
+        line-height: 18px;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+}
+
+.delimiter {
+    background: #8D81AC;
+    width: 60px;
+    height: 5px;
+    margin: 38px auto 30px;
+    border: none;
+
+}
+
+.pricing__items:hover {
+    background-color: rgba(#000000, 0.2);
+    height: 450px*1.2;
+    transition-duration: 1s;
+
+    .pricing__type {
+        background-color: rgba(black, 0.2);
+        transition-duration: 1s;
+    }
+
+    .pricing__price {
+        font-size: 82px;
+        transition-duration: 1s;
+    }
+}

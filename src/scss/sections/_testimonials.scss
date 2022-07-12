@@ -1,0 +1,92 @@
+.testimonials {
+    text-align: center;
+    background: url(../img/testimonials/testmonials-bg.png) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 108px;
+    &__title {
+        text-transform: capitalize;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 50px;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        @include media("max", "md") {
+            font-size: 42px;
+        }
+        @include media("max", "sm") {
+            font-size: 36px;
+        }
+    }
+    &__wrapper {
+        @include flex-wrap;
+        justify-content: center;
+        margin-top: 82px;
+    }
+    &__item {
+        max-width: 26%;
+        margin-bottom: 116px;
+        text-align: center;
+        margin-right: 60px;
+        &:nth-child(3n+3){
+            margin-right: 0;
+        }
+        @include media("max", "md") {
+            max-width: 40%;
+            &:nth-child(3n+3){
+                margin-right: 60px;
+            }
+            &:nth-child(2n){
+                margin-right: 0;
+            }
+        }
+        @include media("max", "sm") {
+            max-width: 80%;
+            margin-right: 0;
+            &:nth-child(3n+3){
+                margin-right: 0;
+            }
+        }
+    }
+    &__img {
+        max-height: 50px;
+        object-fit: cover;
+        width: auto;
+        margin: 0 auto;
+    }
+    &__text {
+        margin-top: 33px;
+        @include lato-bold; 
+        font-style: italic;
+        font-size: 16px;
+        line-height: 24px;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;     
+    }
+    &__txt {
+        @include lato-normal;
+        font-size: 14px;
+        line-height: 21px;
+        align-items: center;
+        text-align: center;
+        color: #A291A5;
+        margin: 0 auto;
+        max-width: 887px;
+        position: relative;
+        padding-bottom: 20px;
+        &:after{
+            content: '';
+            height: 2px;
+            background: #645766;
+            position: absolute;
+            bottom: 0;
+            left: 80px;
+            right: 80px;
+        }
+    }
+}
+
+
